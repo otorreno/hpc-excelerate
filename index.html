@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>NDARC16:- NGS Data Analysis, RNAseq, ChIPseq by bioinformatics-core-shared-training</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">NDARC16:- NGS Data Analysis, RNAseq, ChIPseq; #ndarc16</h1>
+      
+      <h2 class="project-tagline">4-day ngs workshop at Instituto Gulbenkian de Ciência. </h2>
+      
+      <a href="https://github.com/bioinformatics-core-shared-training/ndarc16" class="btn">View on GitHub</a>
+      <a href="https://github.com/bioinformatics-core-shared-training/ndarc16/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/bioinformatics-core-shared-training/ndarc16/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+            <img align="center" src="https://github.com/bioinformatics-core-shared-training/ndarc16/raw/gh-pages/DSC00144-resize.JPG"/>
+        In collaboration with <a href="http://gtpb.igc.gulbenkian.pt/bicourses/index.html">The Gulbenkian Training Programme in Bioinformatics</a>
+        
+      <h1>
+        
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overview</h1>
+
+<p>High-throughput technologies such as next generation sequencing (NGS) can routinely produce massive amounts of data. These technologies allow us to describe all variants in a genome or to detect the whole set of transcripts that are present in a cell or tissue. However, such datasets pose new challenges in the way the data have to be analyzed, annotated and interpreted which are not trivial and are daunting to the wet-lab biologist. This course covers state-of-the-art and best-practice tools for NGS RNA-seq and ChIP-seq data analysis, which are of major relevance in today’s genomic and gene expression studies. </p>
+
+<h1>
+<a id="methods" class="anchor" href="#methods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Methods</h1>
+
+<p>The course is comprised of practical exercises preceded by short lectures. Exercises will be conducted primarily in the R programming language.</p>
+
+<h1>
+<a id="target-audiences" class="anchor" href="#target-audiences" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Target Audiences</h1>
+
+<p>Enthusiastic and motivated wet-lab biologists who want to gain more of an understanding of NGS data and eventually progress to analysing their own data</p>
+
+<h1>
+<a id="pre-requisites" class="anchor" href="#pre-requisites" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pre-requisites</h1>
+
+<p>There is a lot of material to cover in the course, so we will assume that you are familiar with a few basics before you come. The tool that will we do most of the analysis in is R. There will be a short recap of the key concepts at the beginning of the course; however it will be beneficial if you are already familiar with how to read data into R, perform basic subset operations and produce simple plots. </p>
+
+<p>Several Online videos are available that cover this materials. For example</p>
+
+<ul>
+<li><a href="http://shop.oreilly.com/product/0636920034834.do">http://shop.oreilly.com/product/0636920034834.do</a></li>
+<li><a href="http://blog.revolutionanalytics.com/2012/12/coursera-videos.html">http://blog.revolutionanalytics.com/2012/12/coursera-videos.html</a></li>
+<li><a href="http://bitesizebio.com/webinar/20600/beginners-introduction-to-r-statistical-software">http://bitesizebio.com/webinar/20600/beginners-introduction-to-r-statistical-software</a></li>
+</ul>
+
+<p>Some introductory statistics, such as summary statistics for continuous data (mean, variance etc) and interpreting the results of a t-test, will be also be assumed. See "Statistics at Square One"" Chapters 1, 2, 3 and 7 (<a href="http://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one">http://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one</a>) for a good overview.</p>
+
+<p>Basic unix skills, such as being able to list the contents of a directory and copy files, would also be an advantage. See "Session 1" of the Software Carpentry training for a Unix introduction (<a href="http://bioinformatics-core-shared-training.github.io/shell-novice/">http://bioinformatics-core-shared-training.github.io/shell-novice/</a>)</p>
+
+<h1>
+<a id="materials" class="anchor" href="#materials" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Course Materials</h1>
+All material is available to download under Attribution-NonCommercial-NoDerivatives 4.0 International
+<h2>
+<a id="day1" class="anchor" href="#day1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Day 1</h2>
+<p> Morning</p>
+<li><a target="_blank" href="https://rawgit.com/bioinformatics-core-shared-training/ndarc16/master/Day1/Session1-intro.html">Course Introduction</a></li>
+<li><a target="_blank" href="https://rawgit.com/bioinformatics-core-shared-training/ndarc16/master/Day1/Session2-R-recap.pdf">R Refresher</a></li>
+<p>Afternoon</p>
+<li><a target="_blank" href="https://rawgit.com/bioinformatics-core-shared-training/ndarc16/master/Day1/Session3-ngs-intro.html">Intro to NGS</a></li>
+<li><a target="_blank" href="https://rawgit.com/bioinformatics-core-shared-training/ndarc16/master/Day1/Session3-NGS_QC_inesdesantiago.pdf">QC of NGS data (Lecture)</a></li>
+<li><a target="_blank" href="https://rawgit.com/bioinformatics-core-shared-training/ndarc16/master/Day1/Session4-fastqc_sweave.pdf">QC of NGS data (Practical)</a></li>
+<li><a target="_blank" href="https://docs.google.com/forms/d/1h1sXLptX5FUhoVnmwdY7MKEaU-39fcBYpRIsdVpH-LM/viewform?c=0&w=1f">QC of NGS data (Quiz)</a></li>
+<li><a target="_blank" href="http://mrccsc.github.io/IGV_course/">IGV notes</a></li>
+<h2>
+<a id="day2" class="anchor" href="#day2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Day 2</h2>
+<p>Morning</p>
+<li><a target="_blank" href="https://rawgit.com/bioinformatics-core-shared-training/ndarc16/master/Day2/Session1-repSeqData.html">Representing NGS data in Bioconductor (Lecture)</a></li>
+<li><a target="_blank" href="https://rawgit.com/bioinformatics-core-shared-training/ndarc16/master/Day2/Session1-StringsAndRanges-Prac.pdf">Representing NGS data in Bioconductor (Practical)</a></li>
+<p>Afternoon</p>
+
+<li><a target="_blank" href="https://rawgit.com/bioinformatics-core-shared-training/ndarc16/master/Day2/LM_Mar2016.pdf">Statistical Models for Sequencing Data</a></li>
+<li><a target="_blank" href="https://rawgit.com/bioinformatics-core-shared-training/ndarc16/master/Day2/RNAseq_Mar2016.pdf">Introduction to RNA-seq</a></li>
+<li><a target="_blank" href="https://rawgit.com/bioinformatics-core-shared-training/ndarc16/master/Day2/Session4-rnaSeq_align.pdf">Mapping and Counting for RNA-seq (Practical)</a></li>
+<h2>
+<p>Morning</p>
+<a id="day3" class="anchor" href="#day3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Day 3</h2>
+<li><a target="_blank" href="https://rawgit.com/bioinformatics-core-shared-training/ndarc16/master/Day3/Session1-rnaSeq_DE.pdf">Differential Expression for RNA-Seq (Practical)</a></li>
+<p>Afternoon</p>
+<li><a target="_blank" href="https://rawgit.com/bioinformatics-core-shared-training/ndarc16/master/Day3/Session2-annoAndViz.html">Annotation of NGS data in Bioconductor (Lecture)</a></li>
+<li><a target="_blank" href="https://rawgit.com/bioinformatics-core-shared-training/ndarc16/master/Day3/Session2-Annotation-and-Visualisation.pdf">Annotation of NGS data in Bioconductor (Practical)</a></li>
+<li><a target="_blank" href="https://rawgit.com/bioinformatics-core-shared-training/ndarc16/master/Day3/Session3-further-rna-seq.html">Further RNA-seq analysis (Lecture)</a></li>
+<li><a target="_blank" href="https://rawgit.com/bioinformatics-core-shared-training/ndarc16/master/Day3/Session3-further-rna-seq-prac.pdf">Further RNA-seq analysis (Practical)</a></li>
+<h2>
+<a id="day4" class="anchor" href="#day4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Day 4</h2>
+<li><a target="_blank" href="http://bioinformatics-core-shared-training.github.io/ChIPseq_1Day/">See separate page</a></li>
+
+<h1>
+  <a id="Docker" class="anchor" href="#docker" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Docker</h1>
+<li>You can replicate the environment for the course using this <a target="_blank" href="https://rawgit.com/bioinformatics-core-shared-training/ndarc16/master/Dockerfile">Docker file</a></li>
+<li><a target="_blank" href="http://www.docker.com">docker.com</a></li>
+<h1>
+<a id="Acknowledgements" class="anchor" href="#acknowledgements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Acknowledgements</h1>
+<p>
+  The materials from this course are based on NGS analysis courses in Cambridge and the MRC Clinical Sciences Centre. Mark would like to thanks Oscar Rueda, Bernard Pereira (<a target="_blank" href="http://www.cruk.cam.ac.uk/research-groups/caldas-group">Caldas group, CRUK Cambridge</a>), <a target="_blank" href="http://www.markowetzlab.org/ines/">Ines de Santiago</a> and <a target="_blank" href="http://www.mrc-cu.cam.ac.uk/research/Shamith-Samarajiwa-folder/">Shamith Samarajiwa</a>  for making their materials available.
+</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/bioinformatics-core-shared-training/ndarc16">NDARC16:- NGS Data Analysis, RNAseq, ChIPseq</a> is maintained by <a href="https://github.com/bioinformatics-core-shared-training">bioinformatics-core-shared-training</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
