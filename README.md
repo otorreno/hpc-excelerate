@@ -20,7 +20,7 @@ This course has been prepared for two days including theoretical and practical p
 
 # Methods
 
-The course is comprised of practical exercises preceded by short lectures. Exercises will be conducted primarily in the R programming language.
+The course is comprised of practical exercises preceded by short lectures. Exercises will be conducted primarily in the C programming language using the MPI library.
 
 # Target Audience
 This course is open to bioinformatics users and developers that aim at using HPC resources to extend their activity beyond the limitations of sequential applications on commodity hardware. This course will not suit participants that are looking for entry-level concepts in HPC.
