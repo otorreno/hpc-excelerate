@@ -1,0 +1,8 @@
+title: NDARC16:- NGS Data Analysis, RNAseq, ChIPseq
+description: 4-day ngs workshop at Instituto Gulbenkian de Ciência
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions
