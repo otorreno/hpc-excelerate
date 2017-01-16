@@ -28,6 +28,7 @@ This course is open to bioinformatics users and developers that aim at using HPC
 20 participants will be selected by CV and motivation. Gender equality will be an additional aspect to select the participants. As an applicant to this course you need to fill out your personal information, attach your CV and provide a short paragraph to explain why you want to apply for this course. Optionally if you are part of an ELIXIR node you can also attach a letter of endorsement from the node manager. The **last application day** will be **March 3rd**, the **result of the candidate selection** will be notified **March 8th**. The course registration is free, but by sending this participation you commit to attend the course in case you are selected as it is stated in the conditions/policy document of the registration form.
 
 # Pre-requisites
-This course has a broad technical scope and hence programming skills are required.
+This course has a broad technical scope and hence programming skills are required. Experience in the command-line, writing and compiling C code would make the course easier to follow.
 
-Experience in the command-line, writing and compiling C code would make the course easier to follow.
+# Acknoledgements
+Part of the materials of this course are based on HPC lectures from the University of Malaga. We would like to thank Pedro Fernandes the organiser of the Bioinformatics training program at [Instituto Gulbenkian de Ciência](http://gtpb.igc.gulbenkian.pt/bicourses/index.html) for his collaboration as training advisor.
