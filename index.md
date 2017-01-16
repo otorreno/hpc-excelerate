@@ -1,10 +1,10 @@
 # HPC course (ELIXIR-EXCELERATE project)
-2-day course at the University of Malaga organised by the BITLAB group part of ELIXIR-ES
+2-day course at the University of Malaga organised by the BITLAB group part of ELIXIR-ES with the collaboration of the Instituto Gulbenkian de Ciência (ELIXIR-PT)
 Official course page
 
-https://chirimoyo.ac.uma.es/bitlab/events/hpc-excelerate
+https://chirimoyo.ac.uma.es/bitlab/portfolio/hpc-excelerate/
 
-tiny.cc
+or tiny.cc
 
 http://tiny.cc/hpc-excelerate
 
@@ -25,7 +25,7 @@ The course is comprised of practical exercises preceded by short lectures. Exerc
 # Target Audience
 This course is open to bioinformatics users and developers that aim at using HPC resources to extend their activity beyond the limitations of sequential applications on commodity hardware. This course will not suit participants that are looking for entry-level concepts in HPC.
 
-20 participants will be selected by CV and motivation. Gender equality will be an additional aspect to select the participants.
+20 participants will be selected by CV and motivation. Gender equality will be an additional aspect to select the participants. As an applicant to this course you need to fill out your personal information, attach your CV and provide a short paragraph to explain why you want to apply for this course. Optionally if you are part of an ELIXIR node you can also attach a letter of endorsement from the node manager. The **last application day** will be **March 3rd**, the **result of the candidate selection** will be notified **March 8th**. The course registration is free, but by sending this participation you commit to attend the course in case you are selected as it is stated in the conditions/policy document of the registration form.
 
 # Pre-requisites
 This course has a broad technical scope and hence programming skills are required.
