@@ -1,5 +1,5 @@
 # HPC course (ELIXIR-EXCELERATE project)
-2-day course at the University of Malaga organised by the BITLAB group part of ELIXIR-ES with the collaboration of the Instituto Gulbenkian de Ciência (ELIXIR-PT)
+2-day course at the University of Malaga organised by the BITLAB group part of ELIXIR-ES with the collaboration of the Instituto Gulbenkian de Ciência (ELIXIR-PT) and the Institue of Biomedical Informatics (ELIXIR-SI)
 Official course page
 
 https://chirimoyo.ac.uma.es/bitlab/portfolio/hpc-excelerate/
@@ -31,4 +31,4 @@ This course is open to bioinformatics users and developers that aim at using HPC
 This course has a broad technical scope and hence programming skills are required. Experience in the command-line, writing and compiling C code would make the course easier to follow.
 
 # Acknoledgements
-Part of the materials of this course are based on HPC lectures from the University of Malaga. We would like to thank Pedro Fernandes the organiser of the Bioinformatics training program at [Instituto Gulbenkian de Ciência](http://gtpb.igc.gulbenkian.pt/bicourses/index.html) for his collaboration as training advisor.
+Part of the materials of this course are based on HPC lectures from the University of Malaga. We would like to thank Pedro Fernandes the organiser of the Bioinformatics training program at [Instituto Gulbenkian de Ciência](http://gtpb.igc.gulbenkian.pt/bicourses/index.html) for his collaboration as training advisor, and Brane Leskosek and Jan Jona Javorsek for his collaboration as HPC resources providers and training advisors as well.
