@@ -1,6 +1,7 @@
 # HPC course (ELIXIR-EXCELERATE project)
-2-day course at the University of Malaga organised by the BITLAB group part of ELIXIR-ES with the collaboration of the Instituto Gulbenkian de Ciência (ELIXIR-PT) and the Institue of Biomedical Informatics (ELIXIR-SI)
-Official course page
+2-day course at the University of Malaga organised by the BITLAB group part of ELIXIR-ES with the collaboration of the Instituto Gulbenkian de Ciência (ELIXIR-PT) and the Institue of Biomedical Informatics (ELIXIR-SI). The course will take place the 6-7 of April 2017.
+
+# Official course page
 
 https://chirimoyo.ac.uma.es/bitlab/portfolio/hpc-excelerate/
 
