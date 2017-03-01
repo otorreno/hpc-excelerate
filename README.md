@@ -1,35 +1,36 @@
-# HPC course (ELIXIR-EXCELERATE project)
-2-day course at the University of Malaga organised by the BITLAB group part of ELIXIR-ES with the collaboration of the Instituto Gulbenkian de Ciência (ELIXIR-PT) and the Institue of Biomedical Informatics (ELIXIR-SI). The course will take place the 6-7 of April 2017.
+# Compilation instructions
+## Hello world
+`mpicc -O3 mpi_hello_world.c -o ../bin/mpi_hello_world`
 
-# Official course page
+## Bandwith benchmark
+`mpicc -O3 mpi_bandwith.c -o ../bin/mpi_bandwith`
 
-https://chirimoyo.ac.uma.es/bitlab/portfolio/hpc-excelerate/
+## MapReduce static distribution
+`mpicc -O3 mpi_mapreduce_static_distribution.c -o ../bin/mpi_mapreduce_static_distribution`
 
-or tiny.cc
+## MapReduce dynamic distribution (database search example)
+`gcc -O3 map_sequences.c map_functions.c -o ../bin/map_sequences`
+`mpicc -O3 map_mapreduce_dynamic_distribution.c -o ../bin/map_mapreduce_dynamic_distribution`
 
-http://tiny.cc/hpc-excelerate
+# Execution instructions
+## Hello world
+The following line executes the **mpi-hello-world** example with 4 cores. Each MPI process will provide a greeting, printing the host name and its rank:
+`mpirun -np 4 bin/mpi_hello_world`
 
-# Overview
+## Bandwith benchmark
+The following line executes the **mpi-bandwith** program using 4 nodes, which exchange messages of different sizes:
+`mpirun -np 4 bin/mpi_bandwith`
 
-This course, organised as a two-day mini-symposium, aims at introducing the participants in the **complexities of parallel programming** with **emphasis on genome-scale comparison algorithms**.
+## MapReduce static distribution
+The following line executes the **mpi-mapreduce-static-distribution** program, which reads a binary file containing a vector of N integers and then splits such file into C partes, being C the number of available cores:
+`mpirun -np 5 mpi_mapreduce_static_distribution my_file my_file.output`
 
-* The theoretical aspects of this course cover (a) the parallel programing background, with a quick overview in the architectures and programming models; and (b) the basis for genome-scale sequence comparison algorithms.
-* The practical aspects are organised to master the concepts of data distribution and balancing using a Map-Reduce strategy and internal coding with MPI.
+## MapReduce dynamic distribution (database search example)
+In this example we will execute a blast search in parallel. The first step is to create the blast database with the following command:
+`makeblastdb -in db.fasta -dbtype nucl`
 
-# Organization overview
-This course has been prepared for two days including theoretical and practical parts. The first day will start with a **brief introduction to HPC** condensed during the morning. A **practical introductory part to HPC** will complete the first day. The second day will firstly provide the necessary **background on the multiple genome comparison application GECKO**. Secondly, on the same day, we will motivate the **potential HPC techniques to be applied to this application** and will let the students organize in groups to start thinking about a parallelization approach and later on implementing it. At the end of the day each group will briefly describe how they have implemented it and will present their results (i.e. speedup).
+Next, we need to split the input data **query.fasta** using the **map_sequences** program:
+`./bin/map_sequences query.fasta 4 blastn -query query.fasta -db db.fasta -out query.blast`
 
-# Methods
-
-The course is comprised of practical exercises preceded by short lectures. Exercises will be conducted primarily in the C programming language using the MPI library.
-
-# Target Audience
-This course is open to bioinformatics users and developers that aim at using HPC resources to extend their activity beyond the limitations of sequential applications on commodity hardware. This course will not suit participants that are looking for entry-level concepts in HPC.
-
-20 participants will be selected by CV and motivation. Gender equality will be an additional aspect to select the participants. As an applicant to this course you need to fill out your personal information, attach your CV and provide a short paragraph to explain why you want to apply for this course. Optionally if you are part of an ELIXIR node you can also attach a letter of endorsement from the node manager. The **last application day** will be **March 3rd**, the **result of the candidate selection** will be notified **March 8th**. The course registration is free, but by sending this participation you commit to attend the course in case you are selected as it is stated in the conditions/policy document of the registration form.
-
-# Pre-requisites
-This course has a broad technical scope and hence programming skills are required. Experience in the command-line, writing and compiling C code would make the course easier to follow.
-
-# Acknoledgements
-Part of the materials of this course are based on HPC lectures from the University of Malaga. We would like to thank Pedro Fernandes the organiser of the Bioinformatics training program at [Instituto Gulbenkian de Ciência](http://gtpb.igc.gulbenkian.pt/bicourses/index.html) for his collaboration as training advisor, and Brane Leskosek and Jan Jona Javorsek for his collaboration as HPC resources providers and training advisors as well.
+This splits the **query.fasta** file into 4 parts, and generates 2 workload files **query.fasta-map and query.fasta-red**. The first file contains the main workload, whereas the second file contains the reduce function (in this case a simple cat of the separate BLAST reports). To execute the main workload in parallel we use the following line:
+`mpirun -np 5 mapreduce_dynamic_distribution query.fasta-map`
