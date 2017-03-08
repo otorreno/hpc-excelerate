@@ -31,5 +31,5 @@ This course is open to bioinformatics users and developers that aim at using HPC
 # Pre-requisites
 This course has a broad technical scope and hence programming skills are required. Experience in the command-line, writing and compiling C code would make the course easier to follow.
 
-# Acknoledgements
+# Acknowledgements
 Part of the materials of this course are based on HPC lectures from the University of Malaga. We would like to thank Pedro Fernandes the organiser of the Bioinformatics training program at [Instituto Gulbenkian de Ciência](http://gtpb.igc.gulbenkian.pt/bicourses/index.html) for his collaboration as training advisor, and Brane Leskosek and Jan Jona Javorsek for his collaboration as HPC resources providers and training advisors as well.
