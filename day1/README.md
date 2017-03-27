@@ -27,6 +27,7 @@
 `mpicc -O3 map_mapreduce_dynamic_distribution.c -o ../bin/map_mapreduce_dynamic_distribution`
 
 # Execution instructions
+## Shared memory
 ### OpenMP Hello world
 The following line executes the **openmp-hello-world** example. Each OpenMP thread will provide a greeting, printing its rank. The master process will print the total number of OpenMP threads:
 `../bin/omp_hello`
@@ -43,7 +44,8 @@ The following line executes the **openmp-sections-work-sharing** example. Each o
 The following line executes the **openmp-reduction** example. The sum of a given vector is calculated in a parallel for OpenMP construct. OpenMP is instructed to reduce the partial results using the '+' operator:
 `../bin/omp_reduction`
 
-##Distributed memory
+## Distributed memory
+
 ### MPI Hello world
 The following line executes the **mpi-hello-world** example with 4 cores. Each MPI process will provide a greeting, printing the host name and its rank:
 `mpirun -np 4 bin/mpi_hello_world`
