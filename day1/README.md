@@ -44,6 +44,11 @@ The following line executes the **openmp-sections-work-sharing** example. Each o
 The following line executes the **openmp-reduction** example. The sum of a given vector is calculated in a parallel for OpenMP construct. OpenMP is instructed to reduce the partial results using the '+' operator:
 `../bin/omp_reduction`
 
+### Varying the number of OpenMP threads
+To vary the number of OpenMP threads you can do it both inside and outside the code:
+1. Exporting an environment variable to the desired value: `export OMP_NUM_THREADS=8`
+2. Using the `omp_set_num_threads` function inside the source code and before the OpenMP section: `omp_set_num_threads(4);`
+
 ## Distributed memory
 
 ### MPI Hello world
@@ -67,3 +72,7 @@ Next, we need to split the input data **query.fasta** using the **map_sequences*
 
 This splits the **query.fasta** file into 4 parts, and generates 2 workload files **query.fasta-map and query.fasta-red**. The first file contains the main workload, whereas the second file contains the reduce function (in this case a simple cat of the separate BLAST reports). To execute the main workload in parallel we use the following line:
 `mpirun -np 5 mapreduce_dynamic_distribution query.fasta-map`
+
+# References
+[OpenMP examples](https://computing.llnl.gov/tutorials/openMP/exercise.html)
+[MPI examples]
