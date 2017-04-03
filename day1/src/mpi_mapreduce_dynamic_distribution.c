@@ -6,6 +6,7 @@
 #include <mpi.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 #define WORKTAG     1
 #define DIETAG     2
@@ -132,6 +133,7 @@ void slave() {
         if(ppid == 0){
             narg = getCommandLine(work, args);
             execvp(args[0], args);
+	    fprintf(stdout, "%s\n", args[0]);
             fprintf(stderr, "Impossible exec");
             exit(-1);
         }else{
@@ -143,15 +145,15 @@ void slave() {
 }
 
 char *nextTask(FILE *workload_file) {
-    char *res = NULL;
+    char *res = (char *)malloc(MAXLINE * sizeof(char));
+    fgets(res, MAXLINE, workload_file);
     if (!feof(workload_file)) {
-        res = (char *)malloc(MAXLINE * sizeof(char));
-        fgets(res, MAXLINE, workload_file);
         if(res[strlen(res)-1] == '\n')
             res[strlen(res)-1]='\0';
+        return res;
     }
     
-    return res;
+    return NULL;
 }
 
 int getCommandLine(char *completeLine, char **arguments) {

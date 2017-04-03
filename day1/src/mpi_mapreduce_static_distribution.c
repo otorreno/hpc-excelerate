@@ -139,6 +139,7 @@ void master(char * input_file, char *output_file) {
 		}
 
 		fread(aux, sizeof(int), amount, f2);
+		tN += amount;
 		fwrite(aux, sizeof(int), amount, fF);
 
 		fclose(f2);
