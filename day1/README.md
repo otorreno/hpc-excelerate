@@ -85,4 +85,4 @@ This splits the **query.fasta** file into 4 parts, and generates 2 workload file
 
 # References
 * [OpenMP examples](https://computing.llnl.gov/tutorials/openMP/exercise.html)
-* [MPI examples] (https://computing.llnl.gov/tutorials/mpi/exercise.html)
+* [MPI examples](https://computing.llnl.gov/tutorials/mpi/exercise.html)
