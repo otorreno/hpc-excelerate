@@ -95,14 +95,14 @@ In this exercise we will compare the same 6 genomes as in the [multiple genome c
 * **Generate all the reverse complementary sequences** with the following steps:
   * Calculate the **once** reverses:
     * `../bin/generateReversesWorkload.sh fasta > workloadReverses.sh`
-    * `sbatch --ntasks 4 --mem=20gb --time=01:00:00 ../bin/slurmWrapperMPI.sh time mpirun -np 4 /mnt/home/users/tic_182_uma/oscart/gecko-parallel-external/bin/scheduler workloadReverses.sh 2`
+    * `sbatch --ntasks 4 --mem=60gb --time=01:00:00 --partition=local ../bin/slurmWrapperMPI.sh mpirun -np 4 /home/griduser050/hpc-excelerate/day2/gecko-parallel-external/bin/scheduler workloadReverses.sh 2`
   * Move them to the **reverses** folder:
     * `mkdir reverses`
     * `mv *-revercomp.fasta reverses/`
 * **Generate all the dictionaries for the forward and reverse complementary sequences** with the following steps:
   * Calculate the **once** dictionaries:
     * `../bin/generateDictionariesWorkload.sh fasta > workloadDictionaries.sh`
-    * `sbatch --ntasks 7 --mem=20gb --time=01:00:00 ../bin/slurmWrapperMPI.sh time mpirun -np 7 /mnt/home/users/tic_182_uma/oscart/gecko-parallel-external/bin/scheduler workloadDictionaries.sh 2`
+    * `sbatch --ntasks 7 --mem=60gb --time=01:00:00 --partition=local ../bin/slurmWrapperMPI.sh mpirun -np 7 /home/griduser050/hpc-excelerate/day2/gecko-parallel-external/bin/scheduler workloadDictionaries.sh 2`
   * Move them to the **dictionaries** folder:
     * `mkdir dictionaries`
     * `mv *.d2h* dictionaries/`
@@ -110,5 +110,5 @@ In this exercise we will compare the same 6 genomes as in the [multiple genome c
 * **Generate all the fragment files for all the comparisons** with the following steps:
   * Calculate the fragments:
     * `../bin/allVsAll.sh 100 65 16 fasta > workloadFrags.sh`
-    * `sbatch --ntasks 7 --mem=20gb --time=01:00:00 ../bin/slurmWrapperMPI.sh time mpirun -np 7 /mnt/home/users/tic_182_uma/oscart/gecko-parallel-external/bin/scheduler workloadFrags.sh 2`
+    * `sbatch --ntasks 7 --mem=60gb --time=01:00:00 --partition=local ../bin/slurmWrapperMPI.sh mpirun -np 7 /home/griduser050/hpc-excelerate/day2/gecko-parallel-external/bin/scheduler workloadFrags.sh 2`
   * Results will be stored in the **frags** folder
