@@ -48,7 +48,7 @@ unsigned long scoreMax(char *seq, char *seq2, uint64_t len, int point) {
 	return len * point;
 }
 
-struct Sequence *LeeSeqDB(FILE *f, uint64_t *n, uint64_t *nSeqs,
+struct Sequence *LeeSeqDB(FILE *f, uint64_t *n, uint64_t *nStructs, uint64_t *nSeqs,
                           int fAst) {
     char c;
     uint64_t lon = 0, k = 0, seqs = 0;

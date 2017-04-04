@@ -25,7 +25,7 @@ unsigned long scoreMax(char *seq, char *seq2, uint64_t len, int point);
  * n: sequence length
  * ns: number of nodes in the list
  */
-struct Sequence* LeeSeqDB(FILE *f, uint64_t *n, uint64_t *nStruct, uint64_t *nSeqs, int fAst);
+struct Sequence* LeeSeqDB(FILE *f, uint64_t *n, uint64_t *nStructs, uint64_t *nSeqs, int fAst);
 
 /**
  * Get the value of the sequence in a given position of the list node ns
