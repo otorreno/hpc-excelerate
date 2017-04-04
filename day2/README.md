@@ -12,7 +12,7 @@ The **data** folder present at the same level as the **src** folder contains two
 * **exp1** which contains two genomes to be compared 
 * **exp2** which contains 4 genomes to be compared following an all-versus-all study
 
-###Pairwise genome comparison
+### Pairwise genome comparison
 The fist exercise consists on comparing the 2 genomes inside the **exp1** folder. To do that you should enter such folder and execute the following line:
 `../../bin/workflow.sh G1.fna G2.fna 100 65 32`
 The parameters mean the following:
@@ -26,7 +26,7 @@ This execution will generate two folders:
 * **intermediateFiles** - which will contain the input sequence dictionaries and the hits/seeds of the comparison
 * **results** - which will contain the resulting CSV, frags, frags.INF and frags.MAT files.
 
-###Multiple genome comparison<a name="multiple"></a>
+### Multiple genome comparison<a name="multiple"></a>
 This second exercise compares **6** - *n* genomes following an all-versus-all study. This study leads to **15** - *c=n·(n-1)/2* genome comparisons given the symmetric property of genome comparisons. To execute this exercise you need to use the following line (being at the **exp2** folder):
 `../../bin/allVsAll.sh . 100 65 16 fasta`
 * **.** - folder where the genomes are stored (current directory in this case)
