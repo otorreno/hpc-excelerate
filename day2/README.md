@@ -48,7 +48,7 @@ The **gecko-parallel-internal** folder contains the code, scripts and data to be
 
 ### Compilation instructions
 First you need to enter in the **gecko-parallel-internal/src** folder of the **day2** folder. Then the following lines will compile all the GECKO modules:
-`module load openmpi_gcc`
+`module load openmpi`
 `make all`
 
 ### Running your first comparison in parallel
@@ -58,14 +58,18 @@ The **test** folder present at the same level as the **src** folder contains fiv
 `G,T` 
 * **run4** is equivalent to the previous folder but the workloads vary to match 4 cores and 4 tasks per core
 * **run8** is equivalent to the previous folder but the workloads vary to match 8 cores and 2 tasks per core
-* **run16** is equivalent to the previous folder but the workloads vary to match 16 cores and 2 tasks per core
-* **run32** is equivalent to the previous folder but the workloads vary to match 32 cores and 2 tasks per core
+* **run16** is equivalent to the previous folder but the workloads vary to match 16 cores and 4 tasks per core
 
 Before executing a comparison in parallel you need to modify the **BASE_DIR** variable of the **workflow.sh** script which is in the **bin** folder. This variable should point to the full path of the bin folder.
 
-After this modification, you can navigate to one of the **test/runX** folders in order to execute the the parallel version of GECKO with a given number of cores (2 and 4 in these examples). You need to use the following submission lines:
-`sbatch --ntasks 3 --mem=20gb --time=00:15:00 ../../bin/workflow.sh S1 S2 100 65 32 3 2`
-`sbatch --ntasks 5 --mem=20gb --time=00:15:00 ../../bin/workflow.sh S1 S2 100 65 32 5 4`
+After this modification, you can navigate to one of the **test/runX** folders in order to execute the the parallel version of GECKO with a given number of cores (2, 4, 8 and 16 in these examples). You need to use the following submission lines:
+`sbatch --ntasks 5 --mem=60gb --time=00:15:00 -p local ../../bin/workflow.sh S1 S2 100 65 32 3 2`
+
+`sbatch --ntasks 9 --mem=60gb --time=00:15:00 -p local ../../bin/workflow.sh S1 S2 100 65 32 5 4`
+
+`sbatch --ntasks 17 --mem=60gb --time=00:15:00 -p local ../../bin/workflow.sh S1 S2 100 65 32 9 2`
+
+`sbatch --ntasks 65 --mem=60gb --time=00:15:00 -p local ../../bin/workflow.sh S1 S2 100 65 32 17 4`
 
 As you may have noticed, the execution line is similar to the one of the sequential version but with 2 additional parameters at the end. For the first execution line:
 * **3** which is the number of cores
@@ -83,7 +87,7 @@ The **gecko-parallel-external** folder contains the code, scripts and data to be
 
 ### Compilation instructions
 First you need to enter in the **gecko-parallel-external/src** folder of the **day2** folder. Then the following lines will compile all the GECKO modules:
-`module load openmpi_gcc`
+`module load openmpi`
 `make all`
 
 ### Running the all versus all comparison in parallel
