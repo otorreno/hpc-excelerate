@@ -63,13 +63,13 @@ The **test** folder present at the same level as the **src** folder contains fiv
 Before executing a comparison in parallel you need to modify the **BASE_DIR** variable of the **workflow.sh** script which is in the **bin** folder. This variable should point to the full path of the bin folder.
 
 After this modification, you can navigate to one of the **test/runX** folders in order to execute the the parallel version of GECKO with a given number of cores (2, 4, 8 and 16 in these examples). You need to use the following submission lines:
-`sbatch --ntasks 5 --mem=60gb --time=00:15:00 -p local ../../bin/workflow.sh S1 S2 100 65 32 3 2`
+`sbatch --ntasks 5 --mem=10gb --time=00:15:00 -p local ../../bin/workflow.sh S1 S2 100 65 32 3 2`
 
-`sbatch --ntasks 9 --mem=60gb --time=00:15:00 -p local ../../bin/workflow.sh S1 S2 100 65 32 5 4`
+`sbatch --ntasks 17 --mem=10gb --time=00:15:00 -p local ../../bin/workflow.sh S1 S2 100 65 32 5 4`
 
-`sbatch --ntasks 17 --mem=60gb --time=00:15:00 -p local ../../bin/workflow.sh S1 S2 100 65 32 9 2`
+`sbatch --ntasks 17 --mem=10gb --time=00:15:00 -p local ../../bin/workflow.sh S1 S2 100 65 32 9 2`
 
-`sbatch --ntasks 65 --mem=60gb --time=00:15:00 -p local ../../bin/workflow.sh S1 S2 100 65 32 17 4`
+`sbatch --ntasks 65 --mem=10gb --time=00:15:00 -p local ../../bin/workflow.sh S1 S2 100 65 32 17 4`
 
 As you may have noticed, the execution line is similar to the one of the sequential version but with 2 additional parameters at the end. For the first execution line:
 * **3** which is the number of cores
@@ -95,14 +95,14 @@ In this exercise we will compare the same 6 genomes as in the [multiple genome c
 * **Generate all the reverse complementary sequences** with the following steps:
   * Calculate the **once** reverses:
     * `../bin/generateReversesWorkload.sh fasta > workloadReverses.sh`
-    * `sbatch --ntasks 4 --mem=60gb --time=01:00:00 --partition=local ../bin/slurmWrapperMPI.sh mpirun -np 4 /home/griduser050/hpc-excelerate/day2/gecko-parallel-external/bin/scheduler workloadReverses.sh 2`
+    * `sbatch --ntasks 4 --mem=10gb --time=00:15:00 --partition=local ../bin/slurmWrapperMPI.sh mpirun -np 4 /home/griduser050/hpc-excelerate/day2/gecko-parallel-external/bin/scheduler workloadReverses.sh 2`
   * Move them to the **reverses** folder:
     * `mkdir reverses`
     * `mv *-revercomp.fasta reverses/`
 * **Generate all the dictionaries for the forward and reverse complementary sequences** with the following steps:
   * Calculate the **once** dictionaries:
     * `../bin/generateDictionariesWorkload.sh fasta > workloadDictionaries.sh`
-    * `sbatch --ntasks 7 --mem=60gb --time=01:00:00 --partition=local ../bin/slurmWrapperMPI.sh mpirun -np 7 /home/griduser050/hpc-excelerate/day2/gecko-parallel-external/bin/scheduler workloadDictionaries.sh 2`
+    * `sbatch --ntasks 7 --mem=10gb --time=00:15:00 --partition=local ../bin/slurmWrapperMPI.sh mpirun -np 7 /home/griduser050/hpc-excelerate/day2/gecko-parallel-external/bin/scheduler workloadDictionaries.sh 2`
   * Move them to the **dictionaries** folder:
     * `mkdir dictionaries`
     * `mv *.d2h* dictionaries/`
@@ -110,5 +110,5 @@ In this exercise we will compare the same 6 genomes as in the [multiple genome c
 * **Generate all the fragment files for all the comparisons** with the following steps:
   * Calculate the fragments:
     * `../bin/allVsAll.sh 100 65 16 fasta > workloadFrags.sh`
-    * `sbatch --ntasks 7 --mem=60gb --time=01:00:00 --partition=local ../bin/slurmWrapperMPI.sh mpirun -np 7 /home/griduser050/hpc-excelerate/day2/gecko-parallel-external/bin/scheduler workloadFrags.sh 2`
+    * `sbatch --ntasks 7 --mem=10gb --time=00:15:00 --partition=local ../bin/slurmWrapperMPI.sh mpirun -np 7 /home/griduser050/hpc-excelerate/day2/gecko-parallel-external/bin/scheduler workloadFrags.sh 2`
   * Results will be stored in the **frags** folder
