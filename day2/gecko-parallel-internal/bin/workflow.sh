@@ -7,7 +7,7 @@
 #SBATCH --time=10:00:00
 
 #Loading the MPI module
-module load openmpi_gcc
+module load openmpi
 
 if [ $# != 7 ]; then
    echo " ==== ERROR ... you called this script inappropriately."

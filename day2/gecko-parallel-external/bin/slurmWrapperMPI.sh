@@ -7,7 +7,7 @@
 # walltime
 ##SBATCH --time=10:00:00
 
-module load openmpi_gcc
+module load openmpi
 
 echo "time $@"
 time $@
